@@ -67,6 +67,7 @@ dotfiles install git
 dotfiles install rbenv
 dotfiles install jenv
 dotfiles install ivy-cli
+dotfiles install wsl-keychain
 SCRIPT
 
 # Finally print out some final setup instructions
