@@ -27,6 +27,12 @@ if [ -z "$(which make)" ]; then
     sudo apt-get install -y make
 fi
 
+if [ -z "$(which hub)" ]; then
+    sudo add-apt-repository ppa:cpick/hub
+    sudo apt-get update
+    sudo apt-get install hub
+fi
+
 if [ ! -d "~/.rbenv" ]; then
     git clone git@github.com:rbenv/rbenv.git ~/.rbenv
 
