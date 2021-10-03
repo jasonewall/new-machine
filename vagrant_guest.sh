@@ -13,6 +13,18 @@ if [ -z "$(which ruby)" ]; then
     sudo apt-get install -y ruby # really don't care which version just trying to get dotfiles install to run
 fi
 
+# we actually just need this for selecta
+if [ ! -d "~/.rbenv" ]; then
+    git clone git@github.com:rbenv/rbenv.git ~/.rbenv
+
+    if [ -z "$(which gcc)" ]; then
+        sudo apt-get install gcc
+    fi
+
+    eval rbenv_path=~/.rbenv/bin
+    export PATH="$rbenv_path:$PATH"
+fi
+
 CODE_DIR="$HOME/github.com/jasonewall"
 cd $CODE_DIR
 
@@ -31,6 +43,7 @@ cat <<"SCRIPT" | bash
     dotfiles install dotfiles
     dotfiles install profile
     dotfiles install git
+    dotfiles install rbenv
 SCRIPT
 
 mv ~/.gitconfig{.backup,}
