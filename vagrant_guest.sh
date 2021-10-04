@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 cd ~
 
 if [ ! -d "~/.scripts" ]; then
@@ -18,7 +20,7 @@ if [ ! -d "~/.rbenv" ]; then
     git clone git@github.com:rbenv/rbenv.git ~/.rbenv
 
     if [ -z "$(which gcc)" ]; then
-        sudo apt-get install gcc
+        sudo apt-get install -y gcc
     fi
 
     eval rbenv_path=~/.rbenv/bin
