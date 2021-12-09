@@ -44,6 +44,7 @@ cat <<"SCRIPT" | bash
     source rc
     dotfiles install dotfiles
     dotfiles install profile
+    dotfiles install ps1
     dotfiles install git
     dotfiles install rbenv
 SCRIPT
