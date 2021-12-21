@@ -4,7 +4,7 @@ set -e
 
 cd ~
 
-if [ ! -d "~/.scripts" ]; then
+if [ ! -d ~/.scripts ]; then
     git clone git@github.com:jasonewall/bash-helpers.git ~/.scripts
 fi
 
@@ -16,7 +16,7 @@ if [ -z "$(which ruby)" ]; then
 fi
 
 # we actually just need this for selecta
-if [ ! -d "~/.rbenv" ]; then
+if [ ! -d ~/.rbenv ]; then
     git clone git@github.com:rbenv/rbenv.git ~/.rbenv
 
     if [ -z "$(which gcc)" ]; then
@@ -30,7 +30,7 @@ fi
 CODE_DIR="$HOME/github.com/jasonewall"
 cd $CODE_DIR
 
-if [ ! -d "$CODE_DIR/dotfiles" ]; then
+if [ ! -d $CODE_DIR/dotfiles ]; then
     git clone git@github.com:jasonewall/dotfiles.git
 fi
 
