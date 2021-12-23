@@ -1,5 +1,8 @@
 {
   "registry-mirrors": [
     "http://10.0.2.2:6000"
+  ],
+  "insecure-registries": [
+    "http://10.0.2.2:6000"
   ]
 }
