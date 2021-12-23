@@ -51,6 +51,7 @@ SCRIPT
 
 mv ~/.gitconfig{.backup,}
 
-sudo cp ~/github.com/jasonewall/new-machine/support/vagrant_guest/docker/daemon.json /etc/docker
-
-sudo systemctl restart docker
+if [ -d /etc/docker ]; then
+    sudo cp ~/github.com/jasonewall/new-machine/support/vagrant_guest/docker/daemon.json /etc/docker
+    sudo systemctl restart docker
+fi
