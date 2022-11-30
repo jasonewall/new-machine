@@ -21,6 +21,12 @@ $(git flow config >/dev/null 2>&1) || sudo apt-get install -y git-flow
 if [ -z "$(which keychain)" ]; then
     sudo apt-get install -y keychain
 fi
+
+# install WSL utilities so $WINHOME works
+if [ -z "$(which wslpath)" ]; then
+    sudo apt-get install -y wslu
+fi
+
 # https://medium.com/@pscheit/use-an-ssh-agent-in-wsl-with-your-ssh-setup-in-windows-10-41756755993e
 
 if [ -z "$(which make)" ]; then
@@ -83,16 +89,19 @@ cat << AHK
  * Download and install AutoHotKeys - put a shortcut to  https://github.com/jasonewall/macify-your-pc/blob/main/start.ahk in the startup folder"
 
     https://www.autohotkey.com/docs/FAQ.htm#Startup
+
 AHK
 
 cat << VSCODE
  * Once vscode is installed run the following to copy keybindings from source control to the app directory:
 
     dotfiles install vscode --wsl
+
 VSCODE
 
 cat << RBENV
  * You may need to run the following command get to rbenv enhancements compiled.
 
     cd ~/.rbenv && src/configure && make -C src
+
 RBENV
