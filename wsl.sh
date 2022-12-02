@@ -75,11 +75,13 @@ cat <<"SCRIPT" | bash
 source rc
 dotfiles install dotfiles
 dotfiles install profile
+dotfiles install ps1
 dotfiles install git
 dotfiles install rbenv
 dotfiles install jenv
 dotfiles install ivy-cli
 dotfiles install wsl-keychain
+dotfiles install wslprofile
 SCRIPT
 
 # Finally print out some final setup instructions
