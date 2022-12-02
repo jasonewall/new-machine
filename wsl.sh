@@ -59,7 +59,7 @@ if [ ! -d "~/.jenv" ]; then
     git clone git@github.com:jenv/jenv.git ~/.jenv
 fi
 
-CODE_DIR="$HOME/Code/github"
+CODE_DIR="$HOME/Code/github.com"
 mkdir -p $CODE_DIR
 cd $CODE_DIR
 
