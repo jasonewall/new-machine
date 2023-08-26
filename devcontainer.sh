@@ -1,7 +1,7 @@
 #/usr/bin/env bash
 # For VSCode dev containers
 
-git clone https://github.com/jasonwall/dotfiles.git ~/dotfiles
+git clone https://github.com/jasonewall/dotfiles.git ~/dotfiles
 
 cd ~/dotfiles
 
