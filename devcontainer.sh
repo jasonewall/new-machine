@@ -10,4 +10,5 @@ git switch my-dotfiles
 source rc
 
 dotfiles install dotfiles
+dotfiles install profile
 dotfiles install git
