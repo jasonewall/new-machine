@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 # For VSCode dev containers
 
 git clone https://github.com/jasonewall/dotfiles.git ~/dotfiles
