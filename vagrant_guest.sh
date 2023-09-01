@@ -10,12 +10,12 @@ fi
 
 sudo apt-get update
 
-# look for system ruby which we need to boot up dotfiles
+# we need this for selecta
 if [ -z "$(which ruby)" ]; then
-    sudo apt-get install -y ruby # really don't care which version just trying to get dotfiles install to run
+    sudo apt-get install -y ruby # really don't care which version, selecta runs on anything i'm pretty sure
 fi
 
-# we actually just need this for selecta
+# selecta expect rbenv which then delegates to system
 if [ ! -d ~/.rbenv ]; then
     git clone git@github.com:rbenv/rbenv.git ~/.rbenv
 
